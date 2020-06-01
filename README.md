@@ -1,7 +1,16 @@
-# READ ME /!/
+# Projet Final _ Cat Store
 
-## Création de super boutique de chats en cours 
+Pour voir le site clique ici :  👉 https://cat-store-thp.herokuapp.com/
 
-## Boutique pas fun de chaton
+## Connection au dashboard admin 
 
-## Modif branch lucas
+Mail : 
+Mot de passe : 
+
+## Créateurs
+
+Jessica Leclercq : https://github.com/jessicaleclercq
+Julien Anceau : https://github.com/ZeddBox
+Chris Blassiaux : https://github.com/ChrisBlassiaux
+Lucas Illiano : https://github.com/elviajero971
+Alex Frezoul : https://github.com/AlexFrz
