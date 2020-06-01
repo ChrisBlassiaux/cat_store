@@ -13,4 +13,14 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+//= require ajax-form
+//= require bootstrap
+//= require contact
+//= require gijgo
+//= require imagesloaded.pkgd
+//= require isotope.pkgd
+//= require jquery.ajaxchimp
+//= require
+//= require
+//= require
+//= require
