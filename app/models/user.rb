@@ -10,4 +10,6 @@ class User < ApplicationRecord
     UserMailer.welcome_email(self).deliver_now
   end
 
+  has_many :carts
+  has_many :items, through: :carts
 end
