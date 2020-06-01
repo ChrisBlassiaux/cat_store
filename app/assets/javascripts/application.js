@@ -9,7 +9,8 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+//= ajax-form
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
@@ -20,7 +21,19 @@
 //= require imagesloaded.pkgd
 //= require isotope.pkgd
 //= require jquery.ajaxchimp
-//= require
-//= require
-//= require
-//= require
+//= require jquery.counterup
+//= require jquery.form
+//= require jquery.magnific-popup
+//= require jquery.scrollUp
+//= require jquery.slicknav
+//= require jquery.validate
+//= require main
+//= require nice-select
+//= require owl-carousel
+//= require plugins
+//= require popper
+//= require scrolllt
+//= require sclick 
+//= require waypoints
+//= require wow
+
