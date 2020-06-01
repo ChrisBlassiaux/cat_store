@@ -1310,6 +1310,7 @@ h3 {
 /* line 8, ../../Arafath/CL/CL October/215. Photography/HTML/scss/_slider.scss */
 .slider_area .single_slider {
   height: 900px;
+  background-image: url(https://images.pexels.com/photos/1818608/pexels-photo-1818608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
