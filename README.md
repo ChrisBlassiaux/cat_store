@@ -2,7 +2,7 @@
 
 Pour voir le site clique ici :  👉 https://cat-store-thp.herokuapp.com/
 
-## Connection au dashboard admin 
+## Connection au dashboard Admin 
 
 Mail : 
 
