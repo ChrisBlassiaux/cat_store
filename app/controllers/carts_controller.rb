@@ -5,10 +5,6 @@ class CartsController < ApplicationController
   def show
     @cart = Cart.find_by(user_id: params[:id])
   end
-
-  def create
-
-  end
   
   def update
     @cart = Cart.find_by(user_id: current_user.id)

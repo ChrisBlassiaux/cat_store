@@ -9,6 +9,9 @@
 require 'faker'
 
 
+JoinTableOrderItem.destroy_all
+JoinTableCartItem.destroy_all
+Cart.destroy_all
 Item.destroy_all
 User.destroy_all
 
