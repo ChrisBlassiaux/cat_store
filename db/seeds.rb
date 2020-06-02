@@ -40,7 +40,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Au commencement, Dieu créa l’Homme, mais le voyant si faible, il lui donna le chat, Warren Eckstein",
   race: "Caracal",
-  image_url: "https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  image_url: "https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name,
 )
@@ -90,7 +90,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Les chats sont malins et conscients de l’être, Tomi Ungerer",
   race: "Maine Coon",
-  image_url: "https://images.pexels.com/photos/1472999/pexels-photo-1472999.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  image_url: "https://images.pexels.com/photos/3069334/pexels-photo-3069334.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -130,7 +130,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Quel plus beau cadeau que l’amour d’un chat ? Charles Dickens",
   race: "Caracal",
-  image_url: "https://i.pinimg.com/originals/eb/23/f9/eb23f9da1af44787a8d80ad711f9e2cb.jpg",
+  image_url: "https://images.pexels.com/photos/1056252/pexels-photo-1056252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -160,7 +160,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "La mélancolie, c’est un chat perdu qu’on croît retrouvé, Léo Ferré",
   race: "Bleu Russe",
-  image_url: "https://mesanimaux.com/wp-content/uploads/2018/02/chat-bleu-russe.jpg",
+  image_url: "https://images.pexels.com/photos/1828875/pexels-photo-1828875.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -180,7 +180,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Si vous êtes digne de son affection, un chat deviendra votre ami mais jamais votre esclave, Théophile Gautier ",
   race: "Snowshoe",
-  image_url: "https://images.pexels.com/photos/2698552/pexels-photo-2698552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  image_url: "https://images.pexels.com/photos/156321/pexels-photo-156321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -190,7 +190,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Au plus profond de nous, nous sommes tous motivés par les mêmes urgences. Les chats ont le courage de vivre sans s’en préoccuper, Jim Davis",
   race: "Bleu Russe",
-  image_url: "https://besthqwallpapers.com/Uploads/7-5-2018/51529/thumb2-russian-blue-cat-4k-pets-close-up-domestic-cats.jpg",
+  image_url: "https://images.pexels.com/photos/68594/pexels-photo-68594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -200,7 +200,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Photos de chats",
   race: "Scottish",
-  image_url: "https://images.pexels.com/photos/33492/cat-red-cute-mackerel.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  image_url: "https://images.pexels.com/photos/3971972/pexels-photo-3971972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -210,10 +210,21 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Photos de chats",
   race: "Exotic Shorthair",
-  image_url: "https://images.pexels.com/photos/3888510/pexels-photo-3888510.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  image_url: "https://images.pexels.com/photos/3616232/pexels-photo-3616232.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
+
+# Item 21
+Item.create(
+  title: Faker::Creature::Cat.name,
+  description: "Photos de chats",
+  race: "Maine Coon",
+  image_url: "https://images.pexels.com/photos/1521306/pexels-photo-1521306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  price: prices.sample,
+  photographer: Faker::Name.name
+)
+
 
 
 # User 1

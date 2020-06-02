@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "gt_haptik_trialbd";
+  src: url("fonts/gt-haptik-bold-trial-webfont.woff2") format("woff2"),
+    url("fonts/gt-haptik-bold-trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.jumpbotron {
+  background-image: url(https://images.pexels.com/photos/2698552/pexels-photo-2698552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  padding-top: 50px;
+}
+
+.lowwer {
+  padding: 50px;
+}
+
+.card-header {
+  color: white;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Montserrat", "Open Sans", sans-serif;
+  background-color: white;
+}
+
+.btn-medium {
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-weight: lighter;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.btn-medium:hover {
+  opacity: 1;
+}
+.btn-primary {
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  background-color: #8cd4f4;
+  text-decoration: none;
+}
+
+.btn-danger {
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  background-color: #d8262c;
+  text-decoration: none;
+}
+
+.btn-danger:hover {
+}
+
+.btn-warning {
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  background-color: #f39045;
+  text-decoration: none;
+}
+
+.btn-success {
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  background-color: #60d394;
+  text-decoration: none;
+}
+
+.btn-info {
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  background-color: #ffd97d;
+  text-decoration: none;
+}
+
+/************************/
+/* 	    TYPOGRAPHIES    */
+/************************/
+
+h1,
+h2 {
+  font-family: "gt_haptik_trialbd";
+  font-weight: bold;
+}
+
+h1,
+.h1 {
+  font-size: 6rem;
+}
+
+h2,
+.h2 {
+  font-size: 4rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+.black {
+  background-color: #040404;
+}
+
+.text-black {
+  color: #040404;
+}
+
+.primary {
+  background-color: #d8262c;
+  width: 865px;
+  margin: 0px auto;
+}
+
+.text-primary {
+  color: #d8262c;
+}
+
+.secondary {
+  background-color: #ee6055;
+  width: 865px;
+  margin: 0px auto;
+}
+
+.text-secondary {
+  color: #ee6055;
+}
+
+.tercary {
+  background-color: turquoise;
+  width: 865px;
+  margin: 0px auto;
+}
+
+.text-tercary {
+  color: #turquoise;
+}
+
+.quatuary {
+  background-color: #ffd97d;
+  width: 865px;
+  margin: 0px auto;
+}
+
+.text-quatuary {
+  color: #ffd97d;
+}
+
+.greyone {
+  color: #545454;
+}
+
+.greytwo {
+  color: #848484;
+}
+
+.greythree {
+  color: #c4c4c4;
+}
