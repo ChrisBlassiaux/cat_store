@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 2020_06_01_164020) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+  create_table "indices", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
