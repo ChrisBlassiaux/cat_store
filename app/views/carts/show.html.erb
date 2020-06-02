@@ -1,0 +1,9 @@
+<h1>Test</h1>
+<%= @cart.id %>
+
+<% @cart.items.each do |item| %>
+  <p> <%= item.title %> <%= item.price %> </p>
+  <%= form_with method: "DELETE", url: cart_path(item.id)  do |form| %>
+    <%= form.submit "Supprimer du panier".html_safe, class:"btn btn-danger"%>
+  <% end %>
+<% end %>

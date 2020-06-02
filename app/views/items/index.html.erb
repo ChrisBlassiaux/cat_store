@@ -10,7 +10,7 @@
    <% @items.each do |item| %>
    <div class="card border-secondary mb-3 md-3" style="max-width: 20rem;">
   <div class="card-header" style= "display: block;">
-    <%= image_tag item.image_url,  height: "200px", :crop => :fill %>
+    <%= image_tag item.image_url,  height: "200px", width: "auto", :crop => :fill %>
   </div>
   <div class="card-body">
     <h4 class="card-title"><%= item.title %></h4>
