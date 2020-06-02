@@ -1,18 +1,18 @@
-<main class="container">
-  <h1 class="text-center"><%= @item.title %></h1>
-    <div class="card mb-3">
-  <div class="card-header">
-  <center><%= image_tag @item.image_url, height: "200px;"%></center>
+<%= render "layouts/small_banner"%>
+
+<main class="container mb-5 mt-5">
+    <div class="float-left mr-5">
+       <%= image_tag @item.image_url, height: "500px;" %>
+    </div>
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Photographer : </strong><%= @item.photographer %></li>
+        <li class="list-group-item"><strong>Description : </strong><%= @item.description %></li>
+        <li class="list-group-item"><strong>Race : </strong><%= @item.race %></li>
+        <li class="list-group-item"><strong>Prix : </strong><%= @item.price %>€</li>
+      </ul>
   </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><strong>Photographer : </strong><%= @item.photographer %></li>
-      <li class="list-group-item"><strong>Description : </strong><%= @item.description %></li>
-      <li class="list-group-item"><strong>Race : </strong><%= @item.race %></li>
-      <li class="list-group-item"><strong>Prix : </strong><%= @item.price %>€</li>
-      <%= form_with method: "PUT", url: cart_path  do |form| %>
-        <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-success"%>
-      <% end %>
-    </ul>
-  </div>
-  
+  <%= form_with method: "PUT", url: cart_path  do |form| %>
+    <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-secondary mt-3"%>
+  <% end %>
 </main>

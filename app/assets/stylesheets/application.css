@@ -14,30 +14,3 @@
  *= require_self
  */
 
-@font-face {
-  font-family: "gt_haptik_trialbd";
-  src: url("fonts/gt-haptik-bold-trial-webfont.woff2") format("woff2"),
-    url("fonts/gt-haptik-bold-trial-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.jumbotron {
-  background-image: url(https://pbs.twimg.com/media/C6jA2_WVAAA_4-6.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 400px;
-}
-
-.jumbotitle {
-  font-size: 6em;
-}
-.card-header {
-  color: white;
-  object-fit: cover;
-}
-
-body {
-  font-family: "Montserrat", "Open Sans", sans-serif;
-}

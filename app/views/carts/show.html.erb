@@ -1,10 +1,25 @@
-<h1>Test</h1>
-
-<% @cart.items.each do |item| %>
-  <p> <%= item.title %> <%= item.price %> </p>
-  <%= form_with method: "DELETE", url: cart_path(item.id)  do |form| %>
-    <%= form.submit "Supprimer du panier".html_safe, class:"btn btn-danger"%>
+<div class="container mt-5">
+  <h2>Mon panier</h2>
+  <hr>
+  <% if @cart.items.length != 0 %>
+    <p><strong> Mes articles</strong></p>
   <% end %>
-<% end %>
-<p> Prix total : <%= @cart.total %> </p>
-
+  
+  <% @cart.items.each do |item| %>
+    <div class="card">
+      <div class="card-body">
+        <p><strong>Nom du chat :</strong> <%= item.title %> </p>
+        <p><strong>Prix de la photo :</strong> <%= item.price %> </p>
+        <%= form_with method: "DELETE", url: cart_path(item.id)  do |form| %>
+          <%= form.submit "Supprimer du panier".html_safe, class:"btn btn-danger float-right"%>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <hr>
+  <% if @cart.items.length != 0 %>
+    <p> <strong>Prix total :</strong> <%= @cart.total %> </p>
+  <% else %>
+    <p> Votre panier est vide </p>
+  <% end %>
+</div>
