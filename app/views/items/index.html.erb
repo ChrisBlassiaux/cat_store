@@ -1,4 +1,28 @@
-<h1>Items#index</h1>
+<!doctype html>
+<html lang="en">
 
-<p>Find me in app/views/items/index.html.erb</p>
+  <body>
 
+  <main class="container-fluid">
+  <h2 class="display-4 text-center my-3">Voici nos superbes photos de chats :</h1>
+  <div class="row row-cols-5 row-cols-md-3  p-md-0 m-md-0 d-flex justify-content-center">
+
+   <% @items.each do |item| %>
+   <div class="card border-secondary mb-3 md-3" style="max-width: 20rem;">
+  <div class="card-header" style= "display: block;">
+    <%= image_tag item.image_url,  height: "200px", :crop => :fill %>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title"><%= item.title %></h4>
+    <p class="card-text"><%= item.race %></p>
+    <p class="card-text"><%= item.price %>€</p>
+  </div>
+  <div class="card-footer">
+  <%= link_to "See more", item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
+  </div>
+  </div>
+    <% end %>
+  </main>
+  
+</body>
+</html>

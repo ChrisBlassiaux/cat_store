@@ -20,7 +20,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Ce qui est merveilleux avec un chat c’est qu’il n’y a rien à faire quand il vient à vous, qu’à le regarder, Annie Duperey",
   race: "Scottish",
-  image_url: "https://www.zooplus.fr/magazine/wp-content/uploads/2018/11/scottish-fold-768x533.jpg",
+  image_url: "https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -30,7 +30,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Qui aime un chat aime tous les chats. Qui aime son chien n’aime pas les autres, Roland Topor",
   race: "Exotic Shorthair",
-  image_url: "https://jardinage.lemonde.fr/image_urls/dossiers/2017-11/exotic-shorthair-1-090821.jpg",
+  image_url: "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -40,7 +40,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Au commencement, Dieu créa l’Homme, mais le voyant si faible, il lui donna le chat, Warren Eckstein",
   race: "Caracal",
-  image_url: "https://www.2tout2rien.fr/wp-content/uploads/2016/10/Le-caracal-la-plus-mignonne-espece-de-chat-bebe-chaton-1.jpg",
+  image_url: "https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name,
 )
@@ -50,7 +50,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Petit à petit les chats deviennent l’âme de la maison, Jean Cocteau.",
   race: "Maine Coon",
-  image_url: "https://static.wamiz.fr/image_urls/animaux/chats/large/maine-coon.jpg",
+  image_url: "https://images.pexels.com/photos/821736/pexels-photo-821736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name,
 )
@@ -60,7 +60,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Lorsqu’un chat accorde sa confiance à un homme, c’est sa plus belle offrande, Charles Darwin",
   race: "Scottish",
-  image_url: "https://t1.ea.ltmcdn.com/fr/razas/5/3/8/img_835_scottish-fold_0_600.jpg",
+  image_url: "https://images.pexels.com/photos/804475/pexels-photo-804475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name,
 )
@@ -70,7 +70,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Les chats craignent l’eau, c’est pourquoi ils préfèrent prendre des bains de soleil, Stéphane Caron",
   race: "Bleu Russe",
-  image_url: "https://www.zooplus.fr/magazine/wp-content/uploads/2017/10/fotolia_112943750-1-768x510.jpg",
+  image_url: "https://images.pexels.com/photos/991831/pexels-photo-991831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -80,7 +80,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "On ne choisi jamais un chat, c’est lui qui vous choisi, Philippe Ragueneau",
   race: "Snowshoe",
-  image_url: "https://www.santevet.com/upload/admin/image_urls/article/Chat%202/chat_seul/A.%20CHEVALDIN%20ragdoll%20bleu%20bicolore.jpg",
+  image_url: "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -90,7 +90,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Les chats sont malins et conscients de l’être, Tomi Ungerer",
   race: "Maine Coon",
-  image_url: "https://img-3.journaldesfemmes.fr/inys8jHPqwBUkciFzMw1up_lcYw=/910x607/smart/e4fd8eff75634773aa3501f3957f9501/ccmcms-jdf/11619138.jpg",
+  image_url: "https://images.pexels.com/photos/1472999/pexels-photo-1472999.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -100,7 +100,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "On ne possède pas un chat, c’est lui qui vous possède, Françoise Giroud",
   race: "Bengale",
-  image_url: "https://www.zooplus.fr/magazine/wp-content/uploads/2018/02/fotolia_82719975-1-768x582.jpg",
+  image_url: "https://images.pexels.com/photos/2127433/pexels-photo-2127433.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -110,7 +110,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Le chat ne nous caresse pas, il se caresse à nous, Antoine Rivarol",
   race: "Caracal",
-  image_url: "https://i.pinimg.com/originals/ac/ea/18/acea18d5057098ff7afd6671e0427bc7.jpg",
+  image_url: "https://images.pexels.com/photos/2127433/pexels-photo-2127433.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -120,7 +120,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Dieu a inventé le chat pour que l’homme ait un tigre à caresser chez lui, Victor Hugo",
   race: "Maine Coon",
-  image_url: "https://lemagduchat.ouest-france.fr/image_urls/dossiers/2017-09/maine-coon-2-162050.jpg",
+  image_url: "https://images.pexels.com/photos/3789031/pexels-photo-3789031.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -140,7 +140,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Le temps passé avec un chat n’est jamais perdu, Colette",
   race: "Snowshoe",
-  image_url: "https://lh3.googleusercontent.com/proxy/fUp8DLVYzDZkyXne_ct02uMUArxxY84u0iuhpUM1MZkAhJLmaTBo-LliMdlWzQh1rW6XNo6Y-bWiUrYt3AB9IZgasrtUXNQE0mGug3Ty8FIAmq2NMMu-qDAzVlS3D-D8vJxtGhIwfXML1qjh1EdpTpXMXqgbffZyYurdAu-oz2uLTV2ZNuluXP9z80R6VZeBzgZZB_-qfPgr8-Z6zwkJhL7Ht46DKBUYY-KPCHAhc5S2DPV-9e_ph1ThzYhdz2hi9Zqx0u8",
+  image_url: "https://images.pexels.com/photos/2930204/pexels-photo-2930204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -150,7 +150,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Il n’y a pas besoin de sculpture dans une maison où il y a un chat. Wesley Bates",
   race: "Exotic Shorthair",
-  image_url: "https://www.exoticshorthair.fr/wp-content/uploads/2015/10/exotic-shorthair-5.jpg",
+  image_url: "https://images.pexels.com/photos/3188930/pexels-photo-3188930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -170,7 +170,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Les chinois voient l’heure dans l’œil des chat, Charles Baudelaire",
   race: "Bengale",
-  image_url: "https://www.courrierinternational.com/sites/ci_master/files/styles/image_url_original_1280/public/assets/image_urls/bengal-2042592_960_720.jpg?itok=2gdDKYqC",
+  image_url: "https://images.pexels.com/photos/2173872/pexels-photo-2173872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -180,7 +180,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Si vous êtes digne de son affection, un chat deviendra votre ami mais jamais votre esclave, Théophile Gautier ",
   race: "Snowshoe",
-  image_url: "https://i.pinimg.com/originals/5d/5b/8b/5d5b8b680728df2c1926a398ffe3c1db.jpg",
+  image_url: "https://images.pexels.com/photos/2698552/pexels-photo-2698552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -200,7 +200,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Photos de chats",
   race: "Scottish",
-  image_url: "https://besthqwallpapers.com/Uploads/23-11-2017/30148/thumb2-4k-scottish-fold-cats-kitten-pets.jpg",
+  image_url: "https://images.pexels.com/photos/33492/cat-red-cute-mackerel.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
@@ -210,7 +210,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Photos de chats",
   race: "Exotic Shorthair",
-  image_url: "https://jardinage.lemonde.fr/image_urls/dossiers/2017-11/exotic-shorthair-1-090821.jpg",
+  image_url: "https://images.pexels.com/photos/3888510/pexels-photo-3888510.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   price: prices.sample,
   photographer: Faker::Name.name
 )
