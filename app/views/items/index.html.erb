@@ -1,12 +1,12 @@
 
 <main class="container">
-  <h2 class="display-4 text-center my-3">Voici nos superbes photos de chats :</h2>
+  <h4 class="text-center lowwer">Voici nos superbes photos de chats :</h4>
   <div class="row row-cols-4 row-cols-md-3 col-sm-12 p-md-0 m-md-0 d-flex justify-content-center">
 
   <% @items.each do |item| %>
     <div class="card border-secondary mb-4">
       <div class="card-header p-0">
-        <%= image_tag item.image_url,  height: "200px", class: "card-img-top" %>
+        <%= image_tag item.image_url,  :size => "400x500", :crop => :fill, class: "card-img-top" %>
       </div>
       <div class="card-body">
         <h4 class="card-title"><%= item.title %></h4>

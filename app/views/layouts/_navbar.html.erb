@@ -10,11 +10,11 @@
           <ul class="navbar-nav">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
-              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown1">
+              <button type="button" class="btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown1">
                 <%= current_user.email %>
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
-                <%= link_to "Panier", root_path, class: "dropdown-item" %>
+                <%= link_to "Panier", cart_path(current_user.id), class: "dropdown-item" %>
                 <div class="dropdown-divider"></div>
                 <%= link_to "Log out", destroy_user_session_path, class:"dropdown-item", method: :delete %>
               </div>
@@ -31,18 +31,6 @@
               </div>
             </li>
           <% end %>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="btn-group">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown2">
-                Panier
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
-            <%= link_to "Item 1", new_user_registration_path, class:"dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Item 2", new_user_session_path, class:"dropdown-item" %>
-            </div>
-            </li>
         </ul>
       </div>
   </div>
