@@ -5,13 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   after_create :welcome_send
+  after_create :user_cart
 
-  has_many :carts
+  has_one :cart
   has_many :items, through: :carts
 
   has_many :orders
   
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
+  end
+
+  def user_cart
+    Cart.create(user_id: self.id)
   end
 end

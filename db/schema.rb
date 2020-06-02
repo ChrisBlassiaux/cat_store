@@ -10,17 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_091204) do
+ActiveRecord::Schema.define(version: 2020_06_02_125320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
-    t.bigint "item_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_carts_on_item_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
@@ -38,6 +36,15 @@ ActiveRecord::Schema.define(version: 2020_06_02_091204) do
     t.string "photographer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "join_table_cart_items", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_join_table_cart_items_on_cart_id"
+    t.index ["item_id"], name: "index_join_table_cart_items_on_item_id"
   end
 
   create_table "join_table_order_items", force: :cascade do |t|
@@ -66,8 +73,11 @@ ActiveRecord::Schema.define(version: 2020_06_02_091204) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "remember_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "join_table_cart_items", "carts"
+  add_foreign_key "join_table_cart_items", "items"
 end
