@@ -1,28 +1,22 @@
-<!doctype html>
-<html lang="en">
 
-  <body>
+<main class="container">
+  <h2 class="display-4 text-center my-3">Voici nos superbes photos de chats :</h2>
+  <div class="row row-cols-4 row-cols-md-3 col-sm-12 p-md-0 m-md-0 d-flex justify-content-center">
 
-  <main class="container-fluid">
-  <h2 class="display-4 text-center my-3">Voici nos superbes photos de chats :</h1>
-  <div class="row row-cols-5 row-cols-md-3  p-md-0 m-md-0 d-flex justify-content-center">
-
-   <% @items.each do |item| %>
-   <div class="card border-secondary mb-3 md-3" style="max-width: 20rem;">
-  <div class="card-header" style= "display: block;">
-    <%= image_tag item.image_url,  height: "200px", width: "auto", :crop => :fill %>
+  <% @items.each do |item| %>
+    <div class="card border-secondary mb-4">
+      <div class="card-header p-0">
+        <%= image_tag item.image_url,  height: "200px", class: "card-img-top" %>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title"><%= item.title %></h4>
+        <p class="card-text"><%= item.race %></p>
+        <p class="card-text"><%= item.price %>€</p>
+      </div>
+      <div class="card-footer">
+        <%= link_to "See more", item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
+      </div>
+    </div>
+  <% end %>
   </div>
-  <div class="card-body">
-    <h4 class="card-title"><%= item.title %></h4>
-    <p class="card-text"><%= item.race %></p>
-    <p class="card-text"><%= item.price %>€</p>
-  </div>
-  <div class="card-footer">
-  <%= link_to "See more", item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
-  </div>
-  </div>
-    <% end %>
-  </main>
-  
-</body>
-</html>
+</main>
