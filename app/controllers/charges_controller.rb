@@ -4,7 +4,8 @@ class ChargesController < ApplicationController
   
   def create
     # Amount in cents
-    @amount = 500
+    @cart = current_user.cart
+    @amount = (@cart.total * 100).to_i
   
     customer = Stripe::Customer.create({
       email: params[:stripeEmail],
@@ -15,9 +16,9 @@ class ChargesController < ApplicationController
       customer: customer.id,
       amount: @amount,
       description: 'Rails Stripe customer',
-      currency: 'eu',
+      currency: 'eur',
     })
-  
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
