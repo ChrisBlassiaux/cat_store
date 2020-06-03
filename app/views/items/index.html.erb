@@ -18,7 +18,10 @@
           </div>
           <%# Le bouton see more, à voir si toujours utile ? (Mais quand on l'enlève ça bouge)  %>
           <div class="card-footer">
-            <%= link_to "See more", item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
+            <%= link_to "Voir plus", item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
+              <%= link_to cart_path(item.id), method: "PUT" do %>
+                <i class="fas fa-shopping-cart fa-lg float-right mt-3 mr-2"></i>
+                <% end %>
           </div>
         </div>
       </div>
