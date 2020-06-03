@@ -1,3 +1,7 @@
-<h2>Félicitations, vous venez de payer <strong><%=@cart.total%></strong>€</h2>
+<h2>Félicitations, vous venez de payer <strong><%=@amount%></strong>€</h2>
+
+<p>Vous avez acheté <%=@order.items.length%> photos de chat.</p>
+
 <p>Vous allez recevoir vos photos par e-mail!!</p>
-<%= link_to "Acceuil", root_path %>
+
+<%= link_to "Accueil", root_path %>
