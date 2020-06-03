@@ -17,7 +17,7 @@ body {
 
 h1,
 h2 {
-  font-family: "gt_haptik_trialbd";
+  font-family: "gt_haptik_trialbd", "Montserrat", "Open Sans", sans-serif;
   font-weight: bold;
 }
 
@@ -49,4 +49,8 @@ h5,
 h6,
 .h6 {
   font-size: 1rem;
+}
+
+p {
+  font-family: "Montserrat", "Open Sans";
 }
