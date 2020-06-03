@@ -24,12 +24,9 @@
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
                 <%= link_to "Profil", user_path(current_user.id), class: "dropdown-item" %>
-                <div class="dropdown-divider"></div>
                 <% if current_user.is_admin %>
                   <%= link_to "Dashboard Admin", admin_dashboard_index_path, class: "dropdown-item" %>
-                  <div class="dropdown-divider"></div>
                 <% end %>
-                <%= link_to "Panier", cart_path(current_user.id), class: "dropdown-item" %>
                 <div class="dropdown-divider"></div>
                 <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
               </div>
@@ -50,4 +47,3 @@
       </div>
   </div>
 </nav>
-    <p><%= @carts_length %> </p>
