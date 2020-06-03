@@ -2,6 +2,11 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_current_user, only: [:show]
 
+  def index
+    @carts = Cart.all
+    @carts_length = (Cart.find_by(user_id: current_user.id)).items.length
+  end  
+
   def show
     @cart = Cart.find_by(user_id: params[:id])
   end
