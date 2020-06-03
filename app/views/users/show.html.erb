@@ -1,24 +1,33 @@
-  <div class="container">
-    <div class="text-center pt-5">
-      <div class="col-md-8 col-lg-6 col-xl-5 mx-auto">
+              
+         <div class="container">     
+            </br>
+            <h2 class="action-banner">Mon profil</h2>
+<main class="container mb-5 mt-5">
+    <div class="float-left mr-5">
+       
+    </div>
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+           <div class="text-center pt-5">
       <% if current_user.first_name == '' && current_user.last_name == ''%>
         <h4 class="font-weight-bold my-4">Nom : Non renseigné</h4>
       <% else %>
-        <h4 class="font-weight-bold my-4">Nom : <%= current_user.first_name %> <%= current_user.last_name %></h4>
+         <h3 class="action-banner2">Nom :</h3>
+        <h4> <%= current_user.first_name %> <%= current_user.last_name %></h4>
       <% end %>
-        <div class=" d-flex justify-content-center">
-          <%= link_to "Editer mon profil", edit_user_path(current_user.id), class:"btn btn-secondary button_center my-2" %>
-        </div>
         <div class="text mb-4">
-          <h5 class="font-weight-bold my-4">Email : <%= current_user.email %></h5>
+            <h3 class="action-banner2">Email :</h3>
+            <h4><%= current_user.email %></h4>
         </div>
       </div>
     </div>
   </div>
 
   <div class=" d-flex justify-content-center">
-    <%= link_to "Modifier mon compte", edit_user_registration_path, class:"btn btn-secondary button_center my-2" %>
-  </div>
+    <%= link_to "Modifier mon compte", edit_user_registration_path, class:"btn btn-danger button_center my-2" %>
+          <%= link_to "Editer mon profil", edit_user_path(current_user.id), class:"btn btn-success button_center my-2" %>
+        </div>
 
 <hr>
 <main class="container mb-5">
