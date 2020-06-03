@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_current_user
 
   def show
     @cart = Cart.find_by(user_id: params[:id])
@@ -17,4 +18,12 @@ class CartsController < ApplicationController
     redirect_to cart_path(current_user.id)
   end
 
+  private
+
+  def set_current_user
+    @cart = Cart.find_by(user_id: params[:id])
+    if current_user.id != @cart.user_id
+      redirect_to root_path
+    end
+  end
 end
