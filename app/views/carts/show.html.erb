@@ -8,8 +8,11 @@
   <% @cart.items.each do |item| %>
     <div class="card">
       <div class="card-body">
+        <div class="float-left mr-5">
+          <p><%= image_tag item.image_url, height: "200px;" %></p>
+        </div>
         <p><strong>Nom du chat :</strong> <%= item.title %> </p>
-        <p><strong>Prix de la photo :</strong> <%= item.price %> </p>
+        <p><strong>Prix de la photo :</strong> <%= item.price %>€</p>
         <%= form_with method: "DELETE", url: cart_path(item.id)  do |form| %>
           <%= form.submit "Supprimer du panier".html_safe, class:"btn btn-danger float-right"%>
         <% end %>

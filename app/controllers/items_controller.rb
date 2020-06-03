@@ -14,6 +14,14 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @item = Item.new(params[:id])
+    if @item.save
+      flash[:success] = "Votre photo a bien été mise en ligne."
+        redirect_to @item
+    else
+      flash.now[:error] = @item.errors.full_messages.to_sentence
+      render :new
+    end  
   end 
 
   def edit
