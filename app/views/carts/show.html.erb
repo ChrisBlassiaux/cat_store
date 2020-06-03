@@ -12,7 +12,7 @@
           <p><%= image_tag item.image_url, height: "200px;" %></p>
         </div>
         <p><strong>Nom du chat :</strong> <%= item.title %> </p>
-        <p><strong>Prix de la photo :</strong> <%= item.price %>€</p>
+        <p><strong>Prix de la photo :</strong> <%= item.price %> €</p>
         <%= form_with(model: @cart, local: true, url: cart_path(item.id), method: "delete")  do |form| %>
           <%= form.submit "Supprimer du panier", class:"btn btn-danger float-right"%>
         <% end %>
