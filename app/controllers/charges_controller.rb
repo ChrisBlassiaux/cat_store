@@ -24,7 +24,6 @@ class ChargesController < ApplicationController
     @order_items = @cart.items.each do |item|
       JoinTableOrderItem.create(item_id: item.id, order_id: @order.id)
     end
-
     
     @cart.items.destroy_all
     
