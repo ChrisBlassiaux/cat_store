@@ -21,12 +21,12 @@
   <% end %>
   <hr>
   <% if @cart.items.length != 0 %>
-    <p> <strong>Prix total :</strong> <%= @cart.total %> </p>
+    <h5> <strong>Prix total :</strong> <%= @cart.total %> €</h5>
   <% else %>
     <p> Votre panier est vide </p>
   <% end %>
 
-  <div id="stripe">
+  <div id="stripe" class="mt-2">
     <%= render 'stripe' %>
   </div>
 </div>
