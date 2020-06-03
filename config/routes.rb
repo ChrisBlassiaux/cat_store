@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   root to: 'items#index'
   resources :items, path: 'chat'
   resources :carts, only: [:show, :update, :destroy], path: 'panier'
-  
-  resources :charges
+  resources :users, only: [:show, :update, :edit], path: 'profil'
+  resources :charges, only: [:new, :create], path: 'paiement'
 end
