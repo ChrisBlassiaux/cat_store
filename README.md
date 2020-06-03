@@ -2,7 +2,7 @@
 
 Pour voir le site clique ici :  👉 https://cat-store-thp.herokuapp.com/
 
-## Connection au dashboard Admin 
+## Connexion au dashboard Admin 
 
 Mail : admincatstore@yopmail.com
 
