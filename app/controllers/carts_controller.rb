@@ -14,6 +14,11 @@ class CartsController < ApplicationController
   def update
     @cart = Cart.find_by(user_id: current_user.id)
     new_item = JoinTableCartItem.create(cart_id: @cart.id, item_id: params[:id])
+
+    respond_to do |format|
+      format.html { render :new }
+      format.js { }
+    end
   end
 
   def destroy
