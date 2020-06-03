@@ -18,7 +18,16 @@ class ChargesController < ApplicationController
       description: 'Rails Stripe customer',
       currency: 'eur',
     })
+    
+    @order = Order.create(stripe_customer_id: customer.id, user_id: current_user.id)
 
+    @order_items = @cart.items.each do |item|
+      JoinTableOrderItem.create(item_id: item.id, order_id: @order.id)
+    end
+
+    
+    @cart.items.destroy_all
+    
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
