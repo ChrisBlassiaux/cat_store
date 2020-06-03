@@ -1,51 +1,45 @@
-              
-         <div class="container mt-2">     
-  
-            <h2 class="action-banner">Mon profil</h2>
-<main class="container mb-5 mt-5">
-    <div class="float-left mr-5">
-       
-    </div>
-    <div class="card">
+<main class="container mt-5">     
+
+  <div class="card mt-2 mb-3">
+    <h2 class="action-banner">Mon Profil</h2>
+
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-           <div class="text-center pt-5">
-      <% if current_user.first_name == '' && current_user.last_name == ''%>
-        <h4 class="font-weight-bold my-4">Nom : Non renseigné</h4>
-      <% else %>
-         <h3 class="action-banner2">Nom :</h3>
-        <h4> <%= current_user.first_name %> <%= current_user.last_name %></h4>
-      <% end %>
-        <div class="text mb-4">
-            <h3 class="action-banner2">Email :</h3>
-            <h4><%= current_user.email %></h4>
+          <div class=" pt-5">
+            <% if current_user.first_name == '' && current_user.last_name == ''%>
+              <h4 class="font-weight-bold mb-4">Nom : Non renseigné</h4>
+            <% else %>
+              <h4 class="mb-4">Nom : <span style="font-size: 1.5rem"><%= current_user.first_name %> <%=current_user.last_name %></span></h4>
+            <% end %>
+            <div class="text mb-4">
+              <h4 class="">Email : <span style="font-size: 1.5rem"><%= current_user.email %></span> </h4>
+            </div>
+          </div>
+  </div> 
+</main>
+
+<div class=" d-flex justify-content-center">
+  <%= link_to "Modifier mon compte", edit_user_registration_path, class:"btn btn-danger button_center my-2 mx-2" %>
+  <%= link_to "Editer mon profil", edit_user_path(current_user.id), class:"btn btn-success button_center my-2 mx-2" %>
+</div>
+
+<div class="container mt-5">
+  <div class="card mt-2 mb-3">
+    <h4 class="font-weight-bold my-3" >Mon historique de commande </h4>
+    <% if Order.find_by(user_id: @user.id) == nil %>
+       <span style="font-size: 1.5rem"> Vous n'avez pas fait de commandes </span>
+    <% else %>
+    <% Order.all.each do |order| %>
+      <% if order.user_id == current_user.id %>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">Commande du : <%= order.created_at.strftime("%d.%m.%Y à %H:%M") %></p>
+          <p class="card-text"><small class="text-muted">Nombre de produits : <%= order.items.length %></small></p>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class=" d-flex justify-content-center">
-    <%= link_to "Modifier mon compte", edit_user_registration_path, class:"btn btn-danger button_center my-2 mx-2" %>
-    <%= link_to "Editer mon profil", edit_user_path(current_user.id), class:"btn btn-success button_center my-2 mx-2" %>
-  </div>
-
-<hr>
-<main class="container mb-5">
-  <h4 class="font-weight-bold my-4" >Mes commandes </h4>
-  <% if Order.find_by(user_id: @user.id) == nil %>
-     <p> Vous n'avez pas fait de commandes </p>
-  <% else %>
-  <% Order.all.each do |order| %>
-    <% if order.user_id == current_user.id %>
-    <div class="card">
-      <div class="card-body">
-        <p class="card-text">Commande du : <%= order.created_at.strftime("%d.%m.%Y à %H:%M") %></p>
-        <p class="card-text"><small class="text-muted">Nombre de produits : <%= order.items.length %></small></p>
-      </div>
-    </div>
+      <% end %>
     <% end %>
-  <% end %>
-  <% end %>
-
-</main>
+    <% end %>
+  </div>
+</div>
 
