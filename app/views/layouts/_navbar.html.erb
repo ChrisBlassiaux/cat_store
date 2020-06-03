@@ -8,20 +8,27 @@
     <ul class="navbar-nav mr-auto">
     
     </ul>
+          <ul class="navbar-nav">
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "<i class='fas fa-shopping-cart fa-lg '></i> <span class='badge badge-pill badge-danger'>#{current_user.cart.items.count}</span>".html_safe, cart_path(current_user.id), class:"nav-link btn btn-outline-secondary"%>
+            </li>
+            <% end %>
+          </ul>
+
           <ul class="navbar-nav border-nav">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
-              <button type="button" class="dropdown-connect dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown1">
+              <button type="button" class="btn btn-outline-secondary dropdown-connect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown1">
                 <%= current_user.email %>
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
                 <%= link_to "Profil", user_path(current_user.id), class: "dropdown-item" %>
-                <div class="dropdown-divider"></div>
-                <%= link_to "Panier", cart_path(current_user.id), class: "dropdown-item" %>
+                
                 <div class="dropdown-divider"></div>
                 <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
               </div>
-            </li>
+              </li>
           <% else %>
             <li class="btn-group">
               <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown2">
@@ -38,3 +45,4 @@
       </div>
   </div>
 </nav>
+    <p><%= @carts_length %> </p>
