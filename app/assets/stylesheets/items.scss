@@ -32,3 +32,13 @@
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
+
+.color_cart {
+  color: #000;
+  transition: .3s;
+}
+
+.color_cart:hover {
+  color: #FF0000;
+  text-decoration: none;
+}
