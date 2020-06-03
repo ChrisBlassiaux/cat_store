@@ -9,7 +9,7 @@
         <li class="list-group-item"><strong>Photographer : </strong><%= @item.photographer %></li>
         <li class="list-group-item"><strong>Description : </strong><%= @item.description %></li>
         <li class="list-group-item"><strong>Race : </strong><%= @item.race %></li>
-        <li class="list-group-item"><strong>Prix : </strong><%= @item.price %>€</li>
+        <li class="list-group-item"><strong>Prix : </strong><%= @item.price %> €</li>
       </ul>
   </div>
   <%= form_with method: "PUT", url: cart_path  do |form| %>

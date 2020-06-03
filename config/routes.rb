@@ -7,4 +7,14 @@ Rails.application.routes.draw do
   resources :carts, only: [:show, :update, :destroy], path: 'panier'
   resources :users, only: [:show, :update, :edit], path: 'profil'
   resources :charges, only: [:new, :create], path: 'paiement'
+
+
+  namespace :admin do
+    root to: 'admin/dashboard#index'
+    resources :dashboard, only: [:index]
+    resources :users
+    resources :orders
+    resources :items
+  end
+
 end

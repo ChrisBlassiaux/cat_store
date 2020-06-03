@@ -228,44 +228,11 @@ Item.create(
   photographer: Faker::Name.name
 )
 
-
-
-# User 1
+# Admin
 User.create(
-  first_name: "Boby",
-  last_name: "House",
-  email: "boby.house@yopmail.com",
-  password: "123456"
-)
-
-# User 2
-User.create(
-  first_name: "Hervé",
-  last_name: "Latronche",
-  email: "herve_latronche@yopmail.com",
-  password: "123456"
-)
-
-# User 3
-User.create(
-  first_name: "Brigitte",
-  last_name: "Folley",
-  email: "brigitte_folley@yopmail.com",
-  password: "123456"
-)
-
-# User 4
-User.create(
-  first_name: "Martha",
-  last_name: "Salamanka",
-  email: "martha_salamanka@yopmail.com",
-  password: "123456"
-)
-
-# User 5
-User.create(
-  first_name: "Jean-louis",
-  last_name: "Barbue",
-  email: "jean-louis_barbue@yopmail.com",
-  password: "123456"
+  first_name: "Admin",
+  last_name: "is Traitor",
+  email: "admincatstore@yopmail.com",
+  password: "123456",
+  is_admin: true
 )

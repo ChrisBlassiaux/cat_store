@@ -20,4 +20,6 @@ class UserMailer < ApplicationMailer
 
     mail(to: @user.email, subject: 'Vos achats chez CatStore !')
   end
+
+  
 end

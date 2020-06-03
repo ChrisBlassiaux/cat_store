@@ -4,9 +4,9 @@ Pour voir le site clique ici :  👉 https://cat-store-thp.herokuapp.com/
 
 ## Connection au dashboard Admin 
 
-Mail : 
+Mail : admincatstore@yopmail.com
 
-Mot de passe : 
+Mot de passe : 123456
 
 ## Créateurs
 

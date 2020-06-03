@@ -8,5 +8,17 @@ class Order < ApplicationRecord
 
   def order_send
     UserMailer.order_email(self).deliver_now
+    AdminMailer.order_email(self).deliver_now
   end
+
+  def total
+    total = 0
+    self.items.each do |item|
+      total += item.price
+    end
+    return total
+  end
+  
 end
+
+
