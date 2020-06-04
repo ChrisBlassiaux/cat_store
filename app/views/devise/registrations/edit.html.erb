@@ -1,6 +1,6 @@
 <main class="container mt-5">
   <div class="card my-3 text-center w-50 card-center">
-    <h2 class="action-banner card-header">Changer votre mot de passe</h2>
+    <h2 class="action-banner card-header">Changez votre mot de passe</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="form-group col-sm">
@@ -40,10 +40,10 @@
   </div>
 
   <div class="card my-3 text-center w-50 card-center">
-    <h2 class="action-banner card-header">Supprimer mon compte</h2>
-    <p class="mt-3">T'es pas heureux chez nous ? 😔</p>
+    <h2 class="action-banner card-header">Supprimez votre compte</h2>
+    <p class="mt-3">Êtes-vous certain.e ? 😔</p>
     <div class="actions mt-3 mb-3">
-      <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Sûr sûr ?" }, method: :delete, class: "btn btn-success" %>
+      <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Attention vous êtes en train de supprimer votre compte" }, method: :delete, class: "btn btn-success" %>
     </div>
   </div>
 

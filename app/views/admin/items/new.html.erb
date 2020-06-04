@@ -1,15 +1,9 @@
-<main class="container">
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6 pt-5 pb-5 text-center">
-      <h3 class="mb-3">Nouveau chat</h3>
-
-      <%= render 'form_new', item: @item  %>
-
-      <div class="text-center">
-        <%= link_to 'Accueil', admin_items_path, class:"btn btn-outline-secondary" %>
-      </div>
+<main class="container mt-5">
+    <div class="card my-3 text-center w-50 card-center">
+      <h3 class="action-banner card-header">Ajoutez une nouvelle photo de chat</h3>
+        <%= render 'form_new', item: @item  %>
     </div>
-    <div class="col-3"></div>
-  </div>
-</main>
+    <div class="text-center">
+      <%= link_to 'Accueil', admin_items_path, class:"btn btn-outline-secondary" %>
+    </div>
+</main>    

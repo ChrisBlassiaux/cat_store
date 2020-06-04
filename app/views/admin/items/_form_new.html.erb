@@ -2,32 +2,32 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
 
-  <div class="form-group">
+  <div class="form-group mb-3 mt-3 col-sm">
     <%= label_tag 'Nom du chat' %>
     <%= text_field_tag 'title', @item.title, class:"form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group mb-3 mt-3 col-sm">
     <%= label_tag 'Description' %>
     <%= text_area_tag 'description', @item.description, class:"form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group mb-3 mt-3 col-sm">
     <%= label_tag 'Race' %>
     <%= text_field_tag 'race', @item.race, class:"form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group mb-3 mt-3 col-sm">
     <%= label_tag 'Photographe' %>
     <%= text_field_tag 'photographer', @item.photographer, class:"form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group mb-3 mt-3 col-sm">
     <%= label_tag 'Prix' %>
     <%= text_field_tag 'price', @item.price, class:"form-control" %>
   </div>
   
-  <div class="form-group">
+  <div class="form-group mb-3 mt-3 col-sm">
     <%= label_tag "Url de l'image" %>
     <%= text_field_tag 'image_url', @item.image_url, class:"form-control" %>
   </div>
