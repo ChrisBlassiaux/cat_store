@@ -1,23 +1,17 @@
-@font-face {
-  font-family: "gt_haptik_trialbd";
-  src: url("fonts/gt-haptik-bold-trial-webfont.woff2") format("woff2"),
-    url("fonts/gt-haptik-bold-trial-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
+/************************/
+/*      TYPOGRAPHIES    */
+/************************/
 
 body {
   font-family: "Montserrat", "Open Sans", sans-serif;
   background-color: white;
+  line-height: 1.4;
 }
-
-/************************/
-/* 	    TYPOGRAPHIES    */
-/************************/
 
 h1,
 h2 {
-  font-family: "gt_haptik_trialbd", "Montserrat", "Open Sans", sans-serif;
+  font-family: "Montserrat", "Roboto", "Open Sans", sans-serif;
   font-weight: bold;
 }
 
@@ -43,7 +37,8 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 h6,
@@ -52,5 +47,10 @@ h6,
 }
 
 p {
-  font-family: "Montserrat", "Open Sans";
+  font-family: "Montserrat", "Roboto", "Open Sans", sans-serif;
+}
+
+.underpic {
+  margin: auto;
+  margin-top: 300px;
 }

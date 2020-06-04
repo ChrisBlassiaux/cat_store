@@ -12,7 +12,9 @@
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Payer votre commande"
-          data-amount="500"
-          data-locale="auto"></script>
+          data-description="Payer votre commande et recevez vos photos par email !"
+          data-locale="auto"
+          data-name="Stripe.com">
+          </script>
+
 <% end %>

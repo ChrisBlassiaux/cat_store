@@ -11,12 +11,13 @@ require 'faker'
 
 JoinTableOrderItem.destroy_all
 JoinTableCartItem.destroy_all
+Comment.destroy_all
 Cart.destroy_all
 Item.destroy_all
 User.destroy_all
+Order.destroy_all
 
-prices = [23.90, 13.5, 19.90, 12.95, 8.50, 29.90, 25.90, 9.90]
-
+prices = [23.90, 13.50, 19.90, 12.95, 8.50, 29.90, 25.90, 9.90]
 
 # Item 1
 Item.create(
