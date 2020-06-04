@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @user = user
 
-    @url  = 'https://cat-store-developpement.herokuapp.com/'
+    @url  = 'https://cat-store-thp.herokuapp.com/'
 
     mail(to: @user.email, subject: 'Bienvenue chez CatStore !')
   end
@@ -16,7 +16,7 @@ class UserMailer < ApplicationMailer
 
     @user = User.find(order.user_id)
 
-    @url  = 'https://cat-store-developpement.herokuapp.com/'
+    @url  = 'https://cat-store-thp.herokuapp.com/'
 
     mail(to: @user.email, subject: 'Vos achats chez CatStore !')
   end
