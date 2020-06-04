@@ -1,7 +1,7 @@
 <%= render "layouts/small_banner"%>
 
 <main class="container mb-5 mt-5">
-    <div class="float-left mr-5">
+    <div class="img-show mr-5">
        <%= image_tag @item.image_url, height: "500px;" %>
     </div>
     <div class="card">
@@ -23,7 +23,6 @@
     <p class="form-text text-muted"> <%= @item.comments.count %> commentaires </p>
     <%= render @item.comments %>
 
-</br>
     <h4 class="text-center mb-3">Ajouter un commentaire</h4>
 
     <%= render "comments/form" %>
