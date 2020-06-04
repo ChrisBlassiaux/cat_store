@@ -1,33 +1,41 @@
 <div class="container mt-5">
-  <h2 class="action-banner">Mon panier</h2>
-  <hr>
-  <% if @cart.items.length != 0 %>
-    <h4><strong> Mes articles</strong></h4>
-  <% end %>
-  <% @cart.items.each do |item| %>
-  
-    <div class="card">
-      <div class="card-body">
-        <div class="float-left mr-5">
-          <p><%= image_tag item.image_url, height: "200px;" %></p>
-        </div>
-        <p><strong>Nom du chat :</strong> <%= item.title %> </p>
-        <p><strong>Prix de la photo :</strong> <%= item.price %> €</p>
-        <%= form_with(model: @cart, local: true, url: cart_path(item.id), method: "delete")  do |form| %>
-          <%= form.submit "Supprimer du panier", class:"btn btn-danger float-right"%>
+  <div class="card my-3 text-center w-50 card-center">
+    <h2 class="action-banner card-header">Mon panier</h2>
+    
+        <% if @cart.items.length != 0 %>
         <% end %>
-      </div>
-    </div>
-  <% end %>
-  <hr>
-  <% if @cart.items.length != 0 %>
-    <h5> <strong>Prix total :</strong> <%= @cart.total %> €</h5>
-    <p>Une fois le réglement effectué vous recevrez vos photos de chats directement sur votre email !</p>
-  <% else %>
-    <p> Votre panier est vide </p>
-  <% end %>
+          <% @cart.items.each do |item| %>
+          <hr>
+          <div class="card-body">
+              <div class="float-left mr-5">
+                  <span class="cart-image"><%= image_tag item.image_url, height: "200px;" %></span>
+              </div>
+              <div class="float-left mb-5 mr-5 text-left">
+                <h5 class="mb-4">Nom du Chat : <span class="card-text"><%= item.title %></span></h5>
+                <h5 class="mb-4">Prix de la Photo : <span class="card-text"><%= item.price %></span> €</h5>
+              </div>
+                <div class="cart-button">
+                  <%= form_with(model: @cart, local: true, url: cart_path(item.id), method: "delete")  do |form| %>
+                    <%= form.submit "Supprimer du panier", class:"btn btn-danger float-left"%>
+                  <% end %> 
+              </div>
+              </div>
+            <% end %> 
+          </div>
 
-  <div id="stripe" class="mt-2">
-    <%= render 'stripe' %>
-  </div>
+        <% if @cart.items.length != 0 %>
+          <div class="container mt-5">
+            <div class="card mt-2 mb-3 text-center w-50 card-center">
+              <h5 class="mb-4 action-banner" >Prix total : <span class="card-text"><%= @cart.total %> €</span></h5>
+              <p>Une fois le réglement effectué vous recevrez vos photos de chats directement sur votre email !</p>
+        <% else %>
+              <p> Votre panier est vide </p>
+        <% end %>
+            </div>
+          </div>
+          <div class="container mt-5 mb-3 text-center w-50 card-center">
+              <div id="stripe" class="mt-2">
+                <%= render 'stripe' %>
+            </div>
+          </div>    
 </div>
