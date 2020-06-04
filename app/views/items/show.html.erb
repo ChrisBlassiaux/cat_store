@@ -1,19 +1,19 @@
 <%= render "layouts/small_banner"%>
 
 <main class="container mb-5 mt-5">
-    <div class="float-left mr-5">
+    <div class="img-show mr-5">
        <%= image_tag @item.image_url, height: "500px;" %>
     </div>
     <div class="card">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Photographe : </strong><%= @item.photographer %></li>
-        <li class="list-group-item"><strong>Description : </strong><%= @item.description %></li>
-        <li class="list-group-item"><strong>Race : </strong><%= @item.race %></li>
-        <li class="list-group-item"><strong>Prix : </strong><%= @item.price %> €</li>
+        <li class="list-group-item"><b>Photographe :</b> <%= @item.photographer %></li>
+        <li class="list-group-item"><b>Description : </b><%= @item.description %></li>
+        <li class="list-group-item"><b>Race : </b><%= @item.race %></li>
+        <li class="list-group-item"><b>Prix : </b><%= @item.price %> €</li>
       </ul>
   </div>
 
-  <div class="text-center">
+  <div class="text-left">
     <%= form_with method: "PUT", url: cart_path  do |form| %>
        <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-danger mt-3 "%>
     <% end %>
