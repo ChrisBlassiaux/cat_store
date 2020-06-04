@@ -4,20 +4,20 @@
   <% if @cart.items.length != 0 %>
     <h4><strong> Mes articles</strong></h4>
   <% end %>
+
   <% @cart.items.each do |item| %>
   
-    <div class="card">
+    <div class="card" id=<%= JoinTableCartItem.find_by(cart_id: @cart.id, item_id: item.id).id %>>
       <div class="card-body">
         <div class="float-left mr-5">
           <p><%= image_tag item.image_url, height: "200px;" %></p>
         </div>
         <p><strong>Nom du chat :</strong> <%= item.title %> </p>
         <p><strong>Prix de la photo :</strong> <%= item.price %>€</p>
-        <%= form_with(model: @cart, local: true, url: cart_path(item.id), method: "delete")  do |form| %>
-          <%= form.submit "Supprimer du panier", class:"btn btn-danger float-right"%>
-        <% end %>
+        <%= link_to 'Supprimer du panier', cart_path(item.id), method: :delete, class: "btn btn-danger float-right", remote: true %> 
       </div>
     </div>
+
   <% end %>
   <hr>
   <% if @cart.items.length != 0 %>
