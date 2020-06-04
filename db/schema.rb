@@ -31,11 +31,6 @@ ActiveRecord::Schema.define(version: 2020_06_04_081526) do
     t.index ["item_id"], name: "index_comments_on_item_id"
   end
 
-  create_table "indices", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
