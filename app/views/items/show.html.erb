@@ -21,10 +21,9 @@
 
 <div class="underpic w-50">
     <p class="form-text text-muted"> <%= @item.comments.count %> commentaires </p>
+    
     <%= render @item.comments %>
 
-</br>
-    <h4 class="text-center mb-3">Ajouter un commentaire</h4>
 
     <%= render "comments/form" %>
 </div>
