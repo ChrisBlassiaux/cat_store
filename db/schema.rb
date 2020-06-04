@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_06_04_081526) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+<<<<<<< HEAD
   create_table "comments", force: :cascade do |t|
     t.string "first_name"
     t.text "body"
@@ -36,6 +37,8 @@ ActiveRecord::Schema.define(version: 2020_06_04_081526) do
     t.datetime "updated_at", null: false
   end
 
+=======
+>>>>>>> 63668a9683136ec75005868a2935fd4abe05ac16
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
