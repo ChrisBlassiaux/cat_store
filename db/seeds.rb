@@ -114,7 +114,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Le chat ne nous caresse pas, il se caresse à nous, Antoine Rivarol",
   race: "Caracal",
-  image_url: "https://images.pexels.com/photos/2127433/pexels-photo-2127433.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  image_url: "https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?cs=srgb&dl=beige-cat-with-gold-colored-crown-1314550.jpg&fm=jpg",
   price: prices.sample,
   photographer: Faker::Name.name
 )
