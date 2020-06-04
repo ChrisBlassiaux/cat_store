@@ -1,3 +1,6 @@
-document.getElementByClassName("color_cart").innerHTML = ""
-document.getElementByClassName("color_cart").insertAdjacentHTML("beforeend", "<%= j render 'carts/cart, cart: @cart %>")
+cart = document.querySelector('span.badge');
+
+number = cart.innerHTML;
+calc = parseInt(number, 10) + 1;
+cart.innerHTML = calc;
 

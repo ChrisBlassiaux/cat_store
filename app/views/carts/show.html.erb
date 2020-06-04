@@ -6,7 +6,7 @@
         <% end %>
           <% @cart.items.each do |item| %>
           <hr>
-          <div class="card-body">
+          <div class="card-body" id=<%= JoinTableCartItem.find_by(cart_id: @cart.id, item_id: item.id).id %>>
               <div class="float-left mr-5">
                   <span class="cart-image"><%= image_tag item.image_url, height: "200px;" %></span>
               </div>
@@ -15,9 +15,7 @@
                 <h5 class="mb-4">Prix de la Photo : <span class="card-text"><%= item.price %></span> €</h5>
               </div>
                 <div class="cart-button">
-                  <%= form_with(model: @cart, local: true, url: cart_path(item.id), method: "delete")  do |form| %>
-                    <%= form.submit "Supprimer du panier", class:"btn btn-danger float-left"%>
-                  <% end %> 
+                  <%= link_to 'Supprimer du panier', cart_path(item.id), method: :delete, class: "btn btn-danger float-left", remote: true %> 
               </div>
               </div>
             <% end %> 
