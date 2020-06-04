@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:index]
     resources :users, path: 'profil'
     resources :orders, path: 'paiement'
-    resources :items, path: 'chat'
+    resources :items, path: 'chat' do
+      resources :comments
+    end
   end
 
 end
