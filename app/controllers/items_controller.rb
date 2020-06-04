@@ -2,8 +2,11 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @items = Item.includes(:category).all
-    @categories = Category.all
+    @items = Item.all
+    @category = []
+    @items.each do |item|
+      @category << item.race
+    end
   end
 
   def show
