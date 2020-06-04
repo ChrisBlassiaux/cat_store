@@ -7,6 +7,11 @@ class ItemsController < ApplicationController
     @items.each do |item|
       @category << item.race
     end
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js  { }
+    end
   end
 
   def show

@@ -3,10 +3,10 @@
 
 <main class="container">
   
-  <div id="filter">
-    <p id="all" class="btn btn-outline-dark">All</p>
+  <div id="filter" class="mt-5 mb-4">
+      <%= link_to "Toutes les races", root_path, id: "all", class: "btn btn-outline-dark" %>
       <% @category.uniq.each do |item| %>
-       <p id="race" class="btn btn-outline-secondary"><%= item %></p>
+        <%= link_to item, root_path, id: "race", class: "btn btn-outline-secondary", remote: true %>
       <% end %>
   </div>
   <div class="row row-cols-4 row-cols-md-3 col-sm-12 p-md-0 m-md-0 d-flex justify-content-center">
