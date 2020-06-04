@@ -4,7 +4,7 @@
     <div class="card">
       <div class="card-header" id="headingOne">
         <a class="font-weight-bold my-4 mb-0">
-          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="dashboard-text">
             Toutes les commandes
           </button>
         </a>
@@ -29,14 +29,20 @@
       </div>
       <div class="card m-2">
         <div class="card-body">
-          <h5 class="text-danger">Total pour les <%= Order.all.length %> commandes : <%= Order.total_commande %> €</h5>
+          <% if Order.all.length == 0 %>
+          <h5 class="text-danger"><%= Order.all.length %> commande passée.</h5>
+          <% elsif Order.all.length == 1%>
+          <h5 class="text-danger"><%= Order.all.length %> commande. Total : <%= Order.total_commande %> €</h5>
+          <% else %>
+          <h5 class="text-danger"><%= Order.all.length %> commandes. Total : <%= Order.total_commande %> €</h5>
+          <% end %>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header" id="headingTwo">
           <a class="font-weight-bold my-4 mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="dashboard-text">
               Tous les utilisateurs
             </button>
           </a>
