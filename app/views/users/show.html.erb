@@ -25,13 +25,13 @@
 
 <div class="container mt-5">
   <div class="card mt-2 mb-3">
-    <h4 class="font-weight-bold my-3" >Mon historique de commande </h4>
+    <h4 class="font-weight-bold my-3 mx-2" >Mon historique de commande </h4>
     <% if Order.find_by(user_id: @user.id) == nil %>
        <span style="font-size: 1.5rem"> Vous n'avez pas fait de commandes </span>
     <% else %>
     <% Order.all.each do |order| %>
       <% if order.user_id == current_user.id %>
-      <div class="card">
+      <div class="card mb-2 mx-2">
         <div class="card-body">
           <p class="card-text">Commande du : <%= order.created_at.strftime("%d.%m.%Y à %H:%M") %></p>
           <p class="card-text"><small class="text-muted">Nombre de produits : <%= order.items.length %></small></p>

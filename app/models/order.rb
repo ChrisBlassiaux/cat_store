@@ -18,6 +18,14 @@ class Order < ApplicationRecord
     end
     return total
   end
+
+  def self.total_commande
+    total = 0
+    Order.all.each do |order|
+      total += order.total 
+    end
+    return total
+  end
   
 end
 

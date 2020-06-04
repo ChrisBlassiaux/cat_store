@@ -1,0 +1,17 @@
+<main class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 pt-5 pb-5 text-center">
+            <h3 class='mb-3'>Editer le chat</h3>
+
+            <%= render 'form', item: @item %>
+
+            <div class="text-center">
+                <%= link_to 'Retour', admin_item_path(@item.id), class:"btn btn-secondary" %> |
+                <%= link_to 'Accueil', admin_items_path, class:"btn btn-outline-secondary" %>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    
+</main>
