@@ -17,4 +17,8 @@ class CommentsController < ApplicationController
         @comment.destroy
         redirect_to item_path(@item)
     end
+
+    def edit
+        @comment = Comment.find(params[:id])
+    end
 end

@@ -18,9 +18,15 @@
           </div>
           <div class="card-footer">
             <%= link_to "Voir plus", item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
+            <% if user_signed_in?%>
               <%= link_to cart_path(item.id), class: "color_cart", remote: true, method: "PUT" do %>
                 <i class="fas fa-shopping-cart fa-lg float-right mt-3 mr-2"></i>
               <% end %>
+            <% else %>
+              <%= link_to new_user_session_path, class: "color_cart", method: "GET" do %>
+                <i class="fas fa-shopping-cart fa-lg float-right mt-3 mr-2"></i>
+              <% end %>
+            <% end %>
           </div>
         </div>
       </div>
