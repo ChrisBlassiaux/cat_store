@@ -1,0 +1,9 @@
+</br>
+<div class="text-center">
+<h5><%= comment.first_name %></h5>
+<p><%= comment.body %></p>
+<p class="text-muted">Il y a <%= time_ago_in_words(comment.created_at) %></p>
+
+<%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Are you sure' }, class: 'btn-danger btn-sm' %>
+</br>
+</div>
