@@ -1,9 +1,32 @@
-</br>
-<div class="text-center">
-<h5><%= comment.first_name %></h5>
-<p><%= comment.body %></p>
-<p class="text-muted">Il y a <%= time_ago_in_words(comment.created_at) %></p>
+<div class="card text-center mt-2 mb-5">
+    <div class="row">
+    <div class="col pt-3">
+        <h5>
+            <% if comment.user.first_name == nil %>
+                Anonyme
+            <% else %>
+                <%= comment.user.first_name %>
+            <% end %>
+        </h5>
+    </div>
 
-<%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Are you sure' }, class: 'btn-danger btn-sm' %>
-</br>
+        <div class="col pt-2">
+            <blockquote class="blockquote">
+                <p> <small> <%= comment.body %></small></p>
+        </div>
+        <div class="col pt-3">
+                <footer class="blockquote-footer">
+                Il y a <cite title="Source Title"><%= time_ago_in_words(comment.created_at)%></cite>
+                </footer>
+            </blockquote>
+        </div>
+
+        <div class="col pt-2">
+            <% if current_user %>
+                <% if current_user.id == comment.user_id %>
+                <%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Es-tu sûr?' }, class: 'btn btn-danger' %>
+                <% end %>
+            <% end %>  
+        </div> 
+    </div>
 </div>

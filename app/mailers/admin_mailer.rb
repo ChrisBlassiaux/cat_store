@@ -8,7 +8,7 @@ class AdminMailer < ApplicationMailer
 
     @admin = User.find_by(is_admin: true)
 
-    @url  = 'https://cat-store-developpement.herokuapp.com/'
+    @url  = 'https://cat-store-thp.herokuapp.com/'
 
     mail(to: @admin.email, subject: 'Un nouvel achat a été effectué')
   end
