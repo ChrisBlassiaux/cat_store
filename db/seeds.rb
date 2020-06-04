@@ -174,7 +174,7 @@ Item.create(
   title: Faker::Creature::Cat.name,
   description: "Les chinois voient l’heure dans l’œil des chat, Charles Baudelaire",
   race: "Bengale",
-  image_url: "https://images.pexels.com/photos/2173872/pexels-photo-2173872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  image_url: "https://images.pexels.com/photos/2071873/pexels-photo-2071873.jpeg?cs=srgb&dl=orange-tabby-cat-near-window-2071873.jpg&fm=jpg",
   price: prices.sample,
   photographer: Faker::Name.name
 )
