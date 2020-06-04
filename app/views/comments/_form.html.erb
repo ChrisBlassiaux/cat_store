@@ -1,0 +1,13 @@
+
+
+<%= form_for([@item, @item.comments.build]) do |f| %>
+    <div class="form-group"> 
+        <%= f.text_field :first_name,  class:"form-control", placeholder: "Ton prénom" %> 
+    </div>
+    <div class="form-group">
+        <%= f.text_area :body,  class:"form-control", placeholder: "Ton commentaire..." %>
+    </div>
+
+ <%= f.submit 'Ajouter un commentaire', :class => 'btn btn-success btn-block' %>
+
+<% end %>
