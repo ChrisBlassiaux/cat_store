@@ -19,7 +19,7 @@
           <ul class="navbar-nav">
             <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "<i class='fas fa-shopping-cart fa-lg '></i> <span class='badge badge-pill badge-danger'>#{current_user.cart.items.count}</span>".html_safe, cart_path(current_user.id), class:"nav-link btn btn-outline-secondary"%>
+              <%= link_to "<i class='fas fa-shopping-cart fa-lg '></i> <span class='badge badge-pill badge-danger'>#{current_user.cart.items.count}</span>".html_safe, cart_path(current_user.id), class:"nav-link btn btn-outline-secondary mr-2"%>
             </li>
             <% end %>
           </ul>

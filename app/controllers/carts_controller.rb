@@ -14,15 +14,24 @@ class CartsController < ApplicationController
   def update
     @cart = Cart.find_by(user_id: current_user.id)
     new_item = JoinTableCartItem.create(cart_id: @cart.id, item_id: params[:id])
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { }
+    end
   end
 
   def destroy
     @user = current_user
-    item = Item.find_by(id: params[:id])
+    @item = Item.find_by(id: params[:id])
     @cart = Cart.find_by(user_id: current_user.id)
-    JoinTableCartItem.find_by(cart_id: @cart.id, item_id: item.id).destroy
+    @cart_item = JoinTableCartItem.find_by(cart_id: @cart.id, item_id: @item.id).destroy
 
-    redirect_to cart_path(@user.id) 
+    respond_to do |format|
+      format.html { redirect_to cart_path(@user.id) }
+      # En commentaire pour le moment que l'AJAX fonctionne pas
+      # format.js { }
+    end
   end
 
   private
