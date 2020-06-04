@@ -15,7 +15,7 @@
                 <h5 class="mb-4">Prix de la Photo : <span class="card-text"><%= item.price %></span> €</h5>
               </div>
                 <div class="cart-button">
-                  <%= link_to 'Supprimer du panier', cart_path(item.id), method: :delete, class: "btn btn-danger float-left", remote: true %> 
+                  <%= link_to 'Supprimer du panier', cart_path(item.id), method: :delete, class: "btn btn-danger float-left" %> 
               </div>
               </div>
             <% end %> 
