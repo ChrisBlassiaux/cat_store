@@ -12,11 +12,11 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    root to: 'admin/dashboard#index'
+    root to: 'admin/items#index'
     resources :dashboard, only: [:index]
-    resources :users
-    resources :orders
-    resources :items
+    resources :users, path: 'profil'
+    resources :orders, path: 'paiement'
+    resources :items, path: 'chat'
   end
 
 end
