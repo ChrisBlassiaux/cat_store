@@ -14,11 +14,14 @@
   </div>
 
   <div class="text-left">
+  <% if user_signed_in?%>
     <%= form_with method: "PUT", url: cart_path  do |form| %>
        <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-danger mt-3 "%>
     <% end %>
-</div>
-
+  <% else %>
+    <%= link_to "Ajouter au panier", new_user_session_path, class: "btn btn-danger mt-3", method: "GET" %>
+    <% end %>
+  </div>
 <div class="underpic">
     <p class="form-text text-muted"> <%= @item.comments.count %> commentaires </p>
     
