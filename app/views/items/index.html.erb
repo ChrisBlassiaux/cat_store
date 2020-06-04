@@ -1,7 +1,17 @@
 <%= render "layouts/banner"%>
 
+
 <main class="container">
+  
   <h4 class="text-center lowwer">Voici nos superbes photos de chats :</h4>
+
+  <div id="filter">
+    <p id="all" class="btn btn-outline-secondary">All</p>
+    <% @categories.each do |category| %>
+      <p id=<%= category.name.split.join.downcase %> class="btn btn-outline-primary"><%= category.name %></p>
+    <% end %>
+  <div>
+
   <div class="row row-cols-4 row-cols-md-3 col-sm-12 p-md-0 m-md-0 d-flex justify-content-center">
 
   <% @items.each do |item| %>
@@ -13,7 +23,7 @@
           </div>
           <div class="card-body">
             <h4 class="card-title"><%= item.title %></h4>
-            <p class="card-text"><%= item.race %></p>
+            <p class="card-text"><%= item.category.name %></p>
             <p class="card-text"><%= item.price %> €</p>
           </div>
           <%# Le bouton see more, à voir si toujours utile ? (Mais quand on l'enlève ça bouge)  %>
