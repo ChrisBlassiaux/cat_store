@@ -24,7 +24,7 @@
         <div class="col pt-2">
             <% if current_user %>
                 <% if current_user.id == comment.user_id %>
-                <%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Es-tu sûr?' }, class: 'btn btn-danger' %>
+                <%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Êtes-vous certain.e de vouloir supprimer votre commentaire ?' }, class: 'btn btn-danger' %>
                 <% end %>
             <% end %>  
         </div> 
