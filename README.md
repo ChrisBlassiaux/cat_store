@@ -56,15 +56,16 @@ Have fun 😻
 ## Avancement du projet 
 
 ```diff
-+ Création d'un Kit UI
-+ Gem Devise
-+ Action Mailer
-+ Gem Stripe
-+ Panier & Commandes
-+ Dashboard Admin
-+ AJAX
-+ Commentaires sur les photos
-- Active Storage (pour améliorer la rapidité du site)
++ MVP : Création d'un Kit UI
++ MVP : Gem Devise
++ MVP : Action Mailer
++ MVP : Gem Stripe
++ MVP : Panier & Commandes
+- MVP : Active Storage (pour améliorer la rapidité du site)
++ FEATURE : Dashboard Admin
++ FEATURE : New / Edit / Destroy for Admin
++ FEATURE : AJAX
++ FEATURE : Commentaires sur les photos
 ```
 
 ## Créateurs
