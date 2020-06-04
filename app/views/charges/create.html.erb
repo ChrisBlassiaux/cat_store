@@ -24,20 +24,18 @@
 </head>
 
 <body>
-<div class="container text-center mt-5">
-
-    <h2 class="action-banner3">Félicitations!! Vous avez acheté <%=@order.items.count%> photos de chat.</h2>
-    </br>
-
-       <h4>Vous avez payé <strong><%= ( @amount / 100 ) %></strong>€</h4>
-
-       <h4>Vous allez recevoir vos photos par e-mail!</h4>
-
+  <div class="container mt-5">
+  <div class="card my-3 text-center card-center">
+    <h2 class="action-banner card-header">Félicitations! Vous avez acheté <%=@order.items.count%> photos de chat.</h2>
+      <div class="container text-center mt-5 mb-4">
+        <h4>Vous avez payé <strong><%= ( @amount / 100 ) %></strong>€</h4>
+        <h4>Vous allez recevoir vos photos par e-mail!</h4>
        </br>
-        <p>Si vous n'êtes pas automatiquement redirigé(e) vers la page d'accueil, cliquer sur le bouton Acceuil</p>
+        <p>Si vous n'êtes pas automatiquement redirigé.e vers la page d'accueil, cliquez sur le bouton Acceuil</p>
         <meta HTTP-EQUIV="REFRESH" content="5; <%=root_path%>">
        <%= link_to "Accueil", root_path, class: "btn btn-info"%>
-
-    </div>
+      </div>
+  </div>
+  </div>    
     </body>
 </html>
