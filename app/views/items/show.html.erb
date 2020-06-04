@@ -6,14 +6,27 @@
     </div>
     <div class="card">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Photographe : </strong><%= @item.photographer %></li>
-        <li class="list-group-item"><strong>Description : </strong><%= @item.description %></li>
-        <li class="list-group-item"><strong>Race : </strong><%= @item.race %></li>
-        <li class="list-group-item"><strong>Prix : </strong><%= @item.price %> €</li>
+        <li class="list-group-item"><b>Photographe :</b> <%= @item.photographer %></li>
+        <li class="list-group-item"><b>Description : </b><%= @item.description %></li>
+        <li class="list-group-item"><b>Race : </b><%= @item.race %></li>
+        <li class="list-group-item"><b>Prix : </b><%= @item.price %> €</li>
       </ul>
   </div>
-  <%= form_with method: "PUT", url: cart_path  do |form| %>
-    <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-secondary mt-3"%>
-  <% end %>
+
+  <div class="text-center">
+    <%= form_with method: "PUT", url: cart_path  do |form| %>
+       <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-danger mt-3 "%>
+    <% end %>
+</div>
+
+<div class="underpic w-50">
+    <p class="form-text text-muted"> <%= @item.comments.count %> commentaires </p>
+    <%= render @item.comments %>
+
+</br>
+    <h4 class="text-center mb-3">Ajouter un commentaire</h4>
+
+    <%= render "comments/form" %>
+</div>
 
 </main>
