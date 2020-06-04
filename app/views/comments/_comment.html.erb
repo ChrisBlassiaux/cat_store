@@ -1,8 +1,6 @@
-
-
-<div class="card text-center mt-2">
+<div class="card text-center mt-2 mb-5">
     <div class="row">
-    <div class="col">
+    <div class="col pt-3">
         <h5>
             <% if comment.user.first_name == nil %>
                 Anonyme
@@ -12,22 +10,23 @@
         </h5>
     </div>
 
-        <div class="col">
+        <div class="col pt-2">
             <blockquote class="blockquote">
-                <p class="mb-0"><%= comment.body %></p>
+                <p> <small> <%= comment.body %></small></p>
         </div>
-        <div class="col">
+        <div class="col pt-3">
                 <footer class="blockquote-footer">
                 Il y a <cite title="Source Title"><%= time_ago_in_words(comment.created_at)%></cite>
                 </footer>
             </blockquote>
         </div>
 
-
-        <% if current_user %>
-            <% if current_user.id == comment.user_id %>
-            <%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Es-tu sûr?' }, class: 'btn btn-danger mb-2' %>
-            <% end %>
-        <% end %>   
+        <div class="col pt-2">
+            <% if current_user %>
+                <% if current_user.id == comment.user_id %>
+                <%= link_to 'Supprimer', [comment.item,comment], method: :delete, data: { confirm: 'Es-tu sûr?' }, class: 'btn btn-danger' %>
+                <% end %>
+            <% end %>  
+        </div> 
     </div>
 </div>

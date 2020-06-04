@@ -19,12 +19,12 @@
     <% end %>
 </div>
 
-<div class="underpic w-50">
+<div class="underpic">
     <p class="form-text text-muted"> <%= @item.comments.count %> commentaires </p>
     
     <%= render @item.comments %>
-
-
+</div>
+<div class="underpic w-50">
     <%= render "comments/form" %>
 </div>
 

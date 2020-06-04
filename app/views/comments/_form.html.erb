@@ -1,8 +1,6 @@
 
 
 <% if current_user != nil %>
-
-</br>
     <h4 class="text-center mb-3">Ajouter un commentaire</h4>
 
     <%= form_for([@item, @item.comments.build]) do |f| %>
